@@ -36,6 +36,14 @@ def tokenize(doc):
     return words
 
 def tokenize_all(doc):
+    """形態素解析をすべて単語が含まれているリストを返す
+    Parameters
+    -------
+    doc:str
+        文字列
+    Returns:list
+        単語リスト
+    """
     mecab = MeCab.Tagger("-Ochasen")
     lines = mecab.parse(doc).splitlines()
     words = []
