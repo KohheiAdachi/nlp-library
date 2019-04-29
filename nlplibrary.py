@@ -44,7 +44,7 @@ def tokenize_all(doc):
         chunks = line.split('\t')
         if not chunks[0] in stop_words:
             words.append(chunks[0])
-    
+    words.remove("EOS")
     return words
            
         
