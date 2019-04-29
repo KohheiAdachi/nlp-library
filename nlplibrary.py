@@ -4,7 +4,7 @@ import MeCab
 
 
 def tokenize(doc):
-    """形態素解析する
+    """形態素解析し，指定した品詞の単語リストを返す
     Parameters
     -------
     doc:str
