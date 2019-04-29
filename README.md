@@ -5,3 +5,11 @@
 
 ## tokenize_all
 形態素解析し，すべての単語リストを返す
+
+# 学習済みモデルなど
+
+## 日本語 Wikipedia エンティティベクトル
+http://www.cl.ecei.tohoku.ac.jp/~m-suzuki/jawiki_vector/
+
+## emoji-ja
+https://github.com/yagays/emoji-ja
