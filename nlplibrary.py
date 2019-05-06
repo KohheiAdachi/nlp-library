@@ -54,7 +54,30 @@ def tokenize_all(doc):
             words.append(chunks[0])
     words.remove("EOS")
     return words
-           
+
+def extract_noun(doc):
+    """形態素解析し，名詞の単語リストを返す
+    Parameters
+    -------
+    doc:str
+        文字列
+    Returns
+    -----
+    words:list
+        形態素解析後のリスト
+    """
+    mecab = MeCab.Tagger("-Ochasen")
+    lines = mecab.parse(doc).splitlines()
+    words = []
+    stop_words = []
+    for line in lines:
+        chunks = line.split('\t')
+        if len(chunks) > 3 and not chunks[2] in stop_words:
+            if chunks[3].startswith('名詞') and not chunks[0] in stop_words:
+                words.append(chunks[0]) 
+    return words
+
+
 def read_doc(filename):
     """ファイルを読み込む
     Parameters
