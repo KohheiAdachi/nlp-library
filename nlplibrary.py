@@ -55,4 +55,16 @@ def tokenize_all(doc):
     words.remove("EOS")
     return words
            
+def read_doc(filename):
+    """ファイルを読み込む
+    Parameters
+    ------
+    filename:str
+        ファイルネーム
+    Return:str
+        ファイルの中身の文字列
+    """
+    with open(filename,mode="r",errors='ignore',encoding="utf-8")as f:
+        text = f.read()
+    return text
         

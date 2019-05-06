@@ -12,6 +12,9 @@ class Testnlplibrary(unittest.TestCase):
     def test_tokenize_all(self):
         text = "今日はいい天気ですね"
         print(nlp.tokenize_all(text))
+ 
+    def test_read_doc(self):
+        print(nlp.read_doc("test.txt"))
 
         
 if __name__ == '__main__':
